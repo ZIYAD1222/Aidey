@@ -1,0 +1,111 @@
+:root {
+  --bg-page: #EDEBE3;
+  --bg-card: #F5F4EE;
+  --border: #D3D1C7;
+  --text-primary: #2c2c2a;
+  --text-secondary: #6b6a63;
+  --text-muted: #8a8880;
+
+  --accent: #0F6E56;
+  --accent-bg: #CDEAE0;
+  --accent-border: #5DCAA5;
+  --accent-strong: #04342C;
+
+  --work: #185FA5;
+  --work-bg: #C3DEF5;
+  --work-title: #042C53;
+  --work-sub: #0C447C;
+
+  --health: #3B6D11;
+  --health-bg: #D2E5B7;
+  --health-title: #173404;
+  --health-sub: #27500A;
+
+  --sports: #B4650F;
+  --sports-bg: #F4DDBB;
+  --sports-title: #4A2A05;
+  --sports-sub: #7A4308;
+
+  --personal: #993556;
+  --personal-bg: #EFCBDA;
+  --personal-title: #4B1528;
+  --personal-sub: #72243E;
+
+  --sports: #B45309;
+  --sports-bg: #FBE4C6;
+  --sports-title: #4A2604;
+  --sports-sub: #7C3D08;
+
+  --radius: 10px;
+  --radius-lg: 20px;
+}
+
+[data-theme='dark'] {
+  --bg-page: #17181C;
+  --bg-card: #1F2126;
+  --border: #2E3138;
+  --text-primary: #F2F1EC;
+  --text-secondary: #A8A9AD;
+  --text-muted: #7A7B80;
+
+  --accent: #4FD9B0;
+  --accent-bg: #163832;
+  --accent-border: #1F5B4E;
+  --accent-strong: #B7F0DE;
+
+  --work: #6FA8E8;
+  --work-bg: #17263A;
+  --work-title: #C9E0FA;
+  --work-sub: #8FC0F2;
+
+  --health: #8FCB4F;
+  --health-bg: #1E2A14;
+  --health-title: #DCF0BC;
+  --health-sub: #ACDE7B;
+
+  --sports: #E8A552;
+  --sports-bg: #2E2211;
+  --sports-title: #F6DCB4;
+  --sports-sub: #EDBE7F;
+
+  --personal: #E67FA3;
+  --personal-bg: #2E1621;
+  --personal-title: #F6CADA;
+  --personal-sub: #EDA0BE;
+
+  --sports: #F0A84B;
+  --sports-bg: #2E2110;
+  --sports-title: #FBE0BA;
+  --sports-sub: #F3C583;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+body[dir='rtl'] {
+  font-family: 'Segoe UI', Tahoma, 'Noto Sans Arabic', -apple-system, sans-serif;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+}
+
+.category-work { --cat: var(--work); --cat-bg: var(--work-bg); --cat-title: var(--work-title); --cat-sub: var(--work-sub); }
+.category-health { --cat: var(--health); --cat-bg: var(--health-bg); --cat-title: var(--health-title); --cat-sub: var(--health-sub); }
+.category-sports { --cat: var(--sports); --cat-bg: var(--sports-bg); --cat-title: var(--sports-title); --cat-sub: var(--sports-sub); }
+.category-personal { --cat: var(--personal); --cat-bg: var(--personal-bg); --cat-title: var(--personal-title); --cat-sub: var(--personal-sub); }
+.category-sports { --cat: var(--sports); --cat-bg: var(--sports-bg); --cat-title: var(--sports-title); --cat-sub: var(--sports-sub); }
