@@ -27,8 +27,14 @@ export const api = {
   updateTask: (token, id, updates) =>
     request(`/tasks/${id}`, { method: 'PATCH', body: updates, token }),
   deleteTask: (token, id) => request(`/tasks/${id}`, { method: 'DELETE', token }),
+  reorderTasks: (token, order) =>
+    request('/tasks/reorder', { method: 'PATCH', body: { order }, token }),
 
   parseTask: (token, message) =>
     request('/ai/parse-task', { method: 'POST', body: { message }, token }),
   getInsight: (token) => request('/ai/insight', { token }),
+
+  getVapidPublicKey: (token) => request('/push/vapid-public-key', { token }),
+  subscribePush: (token, subscription) =>
+    request('/push/subscribe', { method: 'POST', body: { subscription }, token }),
 };

@@ -28,12 +28,15 @@ function fallbackParseTask(message) {
   if (/work|meeting|call|عمل|اجتماع|شغل/i.test(message)) category = 'work';
   if (/doctor|dentist|clinic|طبيب|دكتور|أسنان|عيادة/i.test(message)) category = 'health';
   if (/gym|workout|run|sport|game|match|رياضة|جيم|تمرين|كرة|جري/i.test(message)) category = 'sports';
+  if (/buy|shop|purchase|grocery|شراء|تسوق|بقالة|أشتري/i.test(message)) category = 'shopping';
 
   return {
     title: message.slice(0, 60),
     category,
     due_at: dueAt.toISOString(),
     remind_minutes_before: 30,
+    notes: '',
+    recurrence: 'none',
   };
 }
 
@@ -60,8 +63,9 @@ router.post('/parse-task', async (req, res) => {
       max_tokens: 300,
       system: `You turn a short natural-language request into a task. Current time is ${now}.
 Reply with ONLY a JSON object, no other text, in this exact shape:
-{"title": string, "category": "work" | "health" | "sports" | "personal", "due_at": ISO 8601 datetime string, "remind_minutes_before": integer}
-If no time is given, pick a sensible time later today. If unclear, make your best reasonable guess rather than asking a question.`,
+{"title": string, "category": "work" | "health" | "sports" | "shopping" | "personal", "due_at": ISO 8601 datetime string, "remind_minutes_before": integer, "notes": string}
+If no time is given, pick a sensible time later today. If unclear, make your best reasonable guess rather than asking a question.
+"notes" should be a short empty string unless the message has extra context worth keeping (e.g. items to buy, an address, a reason) — then summarize it briefly.`,
       messages: [{ role: 'user', content: message }],
     });
 

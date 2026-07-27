@@ -1,10 +1,10 @@
 :root {
-  --bg-page: #EDEBE3;
-  --bg-card: #F5F4EE;
-  --border: #D3D1C7;
-  --text-primary: #2c2c2a;
-  --text-secondary: #6b6a63;
-  --text-muted: #8a8880;
+  --bg-page: #F8F9FA;
+  --bg-card: #FFFFFF;
+  --border: #E3E5E8;
+  --text-primary: #2C2C2A;
+  --text-secondary: #6B6A63;
+  --text-muted: #8A8880;
 
   --accent: #0F6E56;
   --accent-bg: #CDEAE0;
@@ -21,25 +21,26 @@
   --health-title: #173404;
   --health-sub: #27500A;
 
-  --sports: #B4650F;
-  --sports-bg: #F4DDBB;
-  --sports-title: #4A2A05;
-  --sports-sub: #7A4308;
+  --sports: #B45309;
+  --sports-bg: #FBE4C6;
+  --sports-title: #4A2604;
+  --sports-sub: #7C3D08;
+
+  --shopping: #6D28D9;
+  --shopping-bg: #E5DAFB;
+  --shopping-title: #2E1065;
+  --shopping-sub: #5B21B6;
 
   --personal: #993556;
   --personal-bg: #EFCBDA;
   --personal-title: #4B1528;
   --personal-sub: #72243E;
 
-  --sports: #B45309;
-  --sports-bg: #FBE4C6;
-  --sports-title: #4A2604;
-  --sports-sub: #7C3D08;
-
   --radius: 10px;
   --radius-lg: 20px;
 }
 
+/* Pure Dark */
 [data-theme='dark'] {
   --bg-page: #17181C;
   --bg-card: #1F2126;
@@ -63,20 +64,180 @@
   --health-title: #DCF0BC;
   --health-sub: #ACDE7B;
 
-  --sports: #E8A552;
-  --sports-bg: #2E2211;
-  --sports-title: #F6DCB4;
-  --sports-sub: #EDBE7F;
+  --sports: #F0A84B;
+  --sports-bg: #2E2110;
+  --sports-title: #FBE0BA;
+  --sports-sub: #F3C583;
+
+  --shopping: #A78BFA;
+  --shopping-bg: #241B36;
+  --shopping-title: #E4D9FC;
+  --shopping-sub: #C9B4F5;
 
   --personal: #E67FA3;
   --personal-bg: #2E1621;
   --personal-title: #F6CADA;
   --personal-sub: #EDA0BE;
+}
 
-  --sports: #F0A84B;
-  --sports-bg: #2E2110;
-  --sports-title: #FBE0BA;
-  --sports-sub: #F3C583;
+/* Midnight Blue — deep dark with blue undertones */
+[data-theme='midnight'] {
+  --bg-page: #0B1220;
+  --bg-card: #121B2E;
+  --border: #223050;
+  --text-primary: #E8EEFC;
+  --text-secondary: #93A2C4;
+  --text-muted: #6B7BA0;
+
+  --accent: #5B8DEF;
+  --accent-bg: #16223D;
+  --accent-border: #2E4B85;
+  --accent-strong: #BBD1FC;
+
+  --work: #7CA8F5;
+  --work-bg: #172645;
+  --work-title: #D6E4FD;
+  --work-sub: #A6C4F8;
+
+  --health: #6FD19B;
+  --health-bg: #122A20;
+  --health-title: #CDF3DE;
+  --health-sub: #9BE3BC;
+
+  --sports: #F0B05A;
+  --sports-bg: #2E2410;
+  --sports-title: #FBE4BE;
+  --sports-sub: #F3C989;
+
+  --shopping: #C69AFA;
+  --shopping-bg: #241C3D;
+  --shopping-title: #EBDCFD;
+  --shopping-sub: #D6B8FA;
+
+  --personal: #F293B9;
+  --personal-bg: #2E1826;
+  --personal-title: #FADAE7;
+  --personal-sub: #F5B3CE;
+}
+
+/* Nordic Slate — minimalist muted gray */
+[data-theme='nordic'] {
+  --bg-page: #E9ECEF;
+  --bg-card: #F4F6F7;
+  --border: #CBD2D9;
+  --text-primary: #2E3440;
+  --text-secondary: #4C566A;
+  --text-muted: #6B7686;
+
+  --accent: #5E81AC;
+  --accent-bg: #D8E2EC;
+  --accent-border: #88A6C7;
+  --accent-strong: #2E3F55;
+
+  --work: #5E81AC;
+  --work-bg: #D8E2EC;
+  --work-title: #29394E;
+  --work-sub: #3B5A7C;
+
+  --health: #6A9B76;
+  --health-bg: #DEEBE0;
+  --health-title: #253E2B;
+  --health-sub: #3E6647;
+
+  --sports: #B4894F;
+  --sports-bg: #ECE0CE;
+  --sports-title: #493A21;
+  --sports-sub: #7A5E35;
+
+  --shopping: #8175A8;
+  --shopping-bg: #E4DFEE;
+  --shopping-title: #362F49;
+  --shopping-sub: #574B78;
+
+  --personal: #A85E7A;
+  --personal-bg: #EDDCE3;
+  --personal-title: #492530;
+  --personal-sub: #7A4055;
+}
+
+/* Forest Emerald — calming nature green */
+[data-theme='forest'] {
+  --bg-page: #0F1D17;
+  --bg-card: #16281F;
+  --border: #24402F;
+  --text-primary: #E4F1E8;
+  --text-secondary: #9BBBA8;
+  --text-muted: #6D9280;
+
+  --accent: #4CAF7D;
+  --accent-bg: #17332420;
+  --accent-border: #2D5A40;
+  --accent-strong: #B7ECD1;
+
+  --work: #6FA8CB;
+  --work-bg: #142935;
+  --work-title: #CDE7F7;
+  --work-sub: #9FCBE3;
+
+  --health: #5FCB8E;
+  --health-bg: #123422;
+  --health-title: #C6F2D8;
+  --health-sub: #92E2B4;
+
+  --sports: #E0AE58;
+  --sports-bg: #33270F;
+  --sports-title: #F8E3BC;
+  --sports-sub: #EFC784;
+
+  --shopping: #B79BE8;
+  --shopping-bg: #251C36;
+  --shopping-title: #E9DDFA;
+  --shopping-sub: #D2B8F2;
+
+  --personal: #E08FA9;
+  --personal-bg: #331923;
+  --personal-title: #F8D8E2;
+  --personal-sub: #EEAFC2;
+}
+
+/* Sunset Warmth — cozy warm tones */
+[data-theme='sunset'] {
+  --bg-page: #FBF1E7;
+  --bg-card: #FFFAF3;
+  --border: #F0DCC4;
+  --text-primary: #3D2B20;
+  --text-secondary: #7A5E48;
+  --text-muted: #9B8067;
+
+  --accent: #E0703E;
+  --accent-bg: #FBE1D0;
+  --accent-border: #EBAC87;
+  --accent-strong: #7A3416;
+
+  --work: #C2703A;
+  --work-bg: #F6DFC7;
+  --work-title: #5A2F0E;
+  --work-sub: #8A4A18;
+
+  --health: #7A9B4E;
+  --health-bg: #E7EED2;
+  --health-title: #354A1B;
+  --health-sub: #55702B;
+
+  --sports: #D4882F;
+  --sports-bg: #F8E2BE;
+  --sports-title: #5C3A0B;
+  --sports-sub: #8C5A14;
+
+  --shopping: #A8628F;
+  --shopping-bg: #F2DCE9;
+  --shopping-title: #4E2740;
+  --shopping-sub: #7C4264;
+
+  --personal: #C4515F;
+  --personal-bg: #F6D9DC;
+  --personal-title: #57201F;
+  --personal-sub: #8C3A3C;
 }
 
 * {
@@ -85,27 +246,62 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-family: 'Readex Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   background: var(--bg-page);
   color: var(--text-primary);
-  transition: background 0.15s ease, color 0.15s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 body[dir='rtl'] {
-  font-family: 'Segoe UI', Tahoma, 'Noto Sans Arabic', -apple-system, sans-serif;
+  font-family: 'Tajawal', 'Segoe UI', Tahoma, -apple-system, sans-serif;
 }
 
 button {
   font-family: inherit;
   cursor: pointer;
+  transition: transform 0.12s ease, opacity 0.12s ease, background 0.12s ease;
 }
 
-input {
+button:active {
+  transform: scale(0.96);
+}
+
+input, select, textarea {
   font-family: inherit;
 }
 
 .category-work { --cat: var(--work); --cat-bg: var(--work-bg); --cat-title: var(--work-title); --cat-sub: var(--work-sub); }
 .category-health { --cat: var(--health); --cat-bg: var(--health-bg); --cat-title: var(--health-title); --cat-sub: var(--health-sub); }
 .category-sports { --cat: var(--sports); --cat-bg: var(--sports-bg); --cat-title: var(--sports-title); --cat-sub: var(--sports-sub); }
+.category-shopping { --cat: var(--shopping); --cat-bg: var(--shopping-bg); --cat-title: var(--shopping-title); --cat-sub: var(--shopping-sub); }
 .category-personal { --cat: var(--personal); --cat-bg: var(--personal-bg); --cat-title: var(--personal-title); --cat-sub: var(--personal-sub); }
-.category-sports { --cat: var(--sports); --cat-bg: var(--sports-bg); --cat-title: var(--sports-title); --cat-sub: var(--sports-sub); }
+
+.category-icon {
+  transition: transform 0.15s ease;
+}
+.category-icon:hover {
+  transform: scale(1.15) rotate(-4deg);
+}
+
+.fade-in {
+  animation: aidey-fade-in 0.18s ease;
+}
+@keyframes aidey-fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.drawer-slide-in {
+  animation: aidey-drawer-in 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@keyframes aidey-drawer-in {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+[dir='rtl'] .drawer-slide-in {
+  animation-name: aidey-drawer-in-rtl;
+}
+@keyframes aidey-drawer-in-rtl {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}

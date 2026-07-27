@@ -17,6 +17,38 @@ const darkTextInput = {
   fontSize: 13.5,
 };
 
+const DAYS = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+function DayPicker({ value, onChange, t }) {
+  const selected = (value || '').split(',').filter(Boolean);
+  function toggleDay(day) {
+    const next = selected.includes(day) ? selected.filter((d) => d !== day) : [...selected, day];
+    onChange(next.join(','));
+  }
+  return (
+    <div style={{ display: 'flex', gap: 4, flexWrap: 'wrap', marginBottom: 12 }}>
+      {DAYS.map((day) => (
+        <button
+          key={day}
+          type="button"
+          onClick={() => toggleDay(day)}
+          style={{
+            height: 28,
+            padding: '0 8px',
+            borderRadius: 'var(--radius)',
+            border: '0.5px solid var(--border)',
+            background: selected.includes(day) ? 'var(--accent)' : '#fff',
+            color: selected.includes(day) ? '#fff' : '#1a1a1a',
+            fontSize: 11.5,
+          }}
+        >
+          {t(day)}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 export default function AddTaskChat({ onCreated }) {
   const { token } = useAuth();
   const { t, lang } = usePrefs();
@@ -141,6 +173,7 @@ export default function AddTaskChat({ onCreated }) {
               <option value="work">{t('work')}</option>
               <option value="health">{t('health')}</option>
               <option value="sports">{t('sports')}</option>
+              <option value="shopping">{t('shopping')}</option>
               <option value="personal">{t('personal')}</option>
             </select>
 
@@ -188,6 +221,48 @@ export default function AddTaskChat({ onCreated }) {
             </select>
             <span style={{ fontSize: 12.5, color: 'var(--text-secondary)' }}>{t('minBefore')}</span>
           </div>
+
+          <textarea
+            value={pending.notes || ''}
+            onChange={(e) => setPending((prev) => ({ ...prev, notes: e.target.value }))}
+            placeholder={t('notesPlaceholder')}
+            rows={2}
+            style={{
+              ...darkTextInput,
+              width: '100%',
+              padding: '8px 10px',
+              marginBottom: 10,
+              resize: 'vertical',
+              fontFamily: 'inherit',
+            }}
+          />
+
+          <label style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
+            <span style={{ fontSize: 12.5, color: 'var(--text-secondary)' }}>{t('repeat')}</span>
+            <select
+              value={pending.recurrence || 'none'}
+              onChange={(e) => setPending((prev) => ({ ...prev, recurrence: e.target.value }))}
+              style={{ ...darkTextInput, height: 32, padding: '0 8px' }}
+            >
+              <option value="none">{t('repeatNone')}</option>
+              <option value="daily">{t('repeatDaily')}</option>
+              <option value="weekly">{t('repeatWeekly')}</option>
+              <option value="monthly">{t('repeatMonthly')}</option>
+            </select>
+          </label>
+
+          {pending.recurrence === 'weekly' && (
+            <div>
+              <span style={{ fontSize: 11.5, color: 'var(--text-secondary)', display: 'block', marginBottom: 6 }}>
+                {t('onDays')}
+              </span>
+              <DayPicker
+                value={pending.recurrence_days}
+                onChange={(days) => setPending((prev) => ({ ...prev, recurrence_days: days }))}
+                t={t}
+              />
+            </div>
+          )}
 
           <div style={{ display: 'flex', gap: 8 }}>
             <button

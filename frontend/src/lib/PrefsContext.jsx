@@ -23,7 +23,7 @@ export function PrefsProvider({ children }) {
   const toggleTheme = () => setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
 
   return (
-    <PrefsContext.Provider value={{ lang, theme, t, toggleLang, toggleTheme }}>
+    <PrefsContext.Provider value={{ lang, theme, t, toggleLang, toggleTheme, setTheme }}>
       {children}
     </PrefsContext.Provider>
   );
