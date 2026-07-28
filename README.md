@@ -1,14 +1,5 @@
 # Aidey — smart assistant website
 
-A task-scheduling assistant: sign in, tell it what to do in plain English or
-Arabic ("dentist Thursday 2pm, remind me an hour before" / "موعد الأسنان
-الخميس الساعة 2، ذكّرني قبل ساعة"), and it schedules the task on a timeline
-with an AI-generated daily insight at the top.
-
-This is the **website** version, built so it converts cleanly into a
-mobile app later (React frontend talking to a REST API is the same shape
-React Native would use).
-
 ## Features
 
 - **Bilingual** — English and Arabic, with full right-to-left layout switching
